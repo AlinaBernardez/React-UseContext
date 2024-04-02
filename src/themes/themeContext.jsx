@@ -10,9 +10,13 @@ export const ThemeProvider = ({ children }) => {
         dark: false
     });
 
+    const changeTheme = () => {
+        setTheme({light: !theme.light, dark: !theme.dark})
+    }
+
     const value = {
         theme, 
-        setTheme,
+        changeTheme,
     }
 
     return(

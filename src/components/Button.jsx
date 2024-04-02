@@ -1,16 +1,23 @@
 import { useTheme } from "../themes/themeContext"
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 export const Button = () => {
-    const { theme, setTheme } = useTheme();
+    const { theme, changeTheme } = useTheme();
     return(
-        <>
+        <div className={theme.light ? 'light' : 'dark'}>
+            <nav className='navbar'>
+                <ul className='navList'>
+                    <Link to={'/'}>Home</Link>
+                    <Link to={'/profile'}>Profile</Link>
+                    <Link to={'/jobs'}>Jobs</Link>
+                </ul>
             { theme.light ? (
-                <button onClick={() => setTheme({light: !theme.light, dark: !theme.dark})}>Dark mode</button>
+                <button onClick={() => changeTheme()}>Dark mode</button>
             ) : (
-                <button onClick={() => setTheme({light: !theme.light, dark: !theme.dark})}>Light mode</button>
+                <button onClick={() => changeTheme()}>Light mode</button>
             )}
+            </nav>
             <Outlet />
-        </>
+        </div>
     )
 }

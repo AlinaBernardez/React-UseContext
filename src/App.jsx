@@ -7,7 +7,7 @@ import { RouteApp } from './routes/RouteApp';
 const App = () => {
   return (
     <ThemeProvider>
-      <RouterProvider router={RouteApp}/>
+        <RouterProvider router={RouteApp}/>
     </ThemeProvider>
   );
 };

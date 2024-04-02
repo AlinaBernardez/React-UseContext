@@ -26,8 +26,7 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 h1 {
@@ -35,10 +34,6 @@ h1 {
   line-height: 1.1;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-}
 
 button {
   border-radius: 8px;
@@ -76,15 +71,17 @@ button:focus-visible {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
 }
 .light {
+  width: 100%;
+  height: 100%;
   background-color: white;
   color: black;
 }
 
 .dark {
+  width: 100%;
+  height: 100%;
   background-color: #242424;
   color: #ccc;
 }
